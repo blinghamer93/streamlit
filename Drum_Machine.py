@@ -40,22 +40,22 @@ if uploaded_file is not None:
         for i in range(16):
             time.sleep(second)
             if df.iloc[0,i+1] == 'x':
-                playsound(f'Samples/{sound}/Kick.WAV', block = False)
+                playsound(f'Samples/{sound}/Kick.WAV', False)
             if df.iloc[1,i+1] == 'x':
-                playsound(f'Samples/{sound}/Snare.WAV',block = False)
+                playsound(f'Samples/{sound}/Snare.WAV',False)
             if df.iloc[2,i+1] == 'x':
-                playsound(f'Samples/{sound}/Lo Tom.WAV', block = False)
+                playsound(f'Samples/{sound}/Lo Tom.WAV', False)
             if df.iloc[3,i+1] =='x':
-                playsound(f'Samples/{sound}/Hi Tom.WAV', block = False)
+                playsound(f'Samples/{sound}/Hi Tom.WAV', False)
             if df.iloc[4,i+1] =='x':
-                playsound(f'Samples/{sound}/Closed Hat.WAV', block = False)
+                playsound(f'Samples/{sound}/Closed Hat.WAV', False)
             if df.iloc[5,i+1] =='x':
-                playsound(f'Samples/{sound}/Open Hat.WAV', block = False)        
+                playsound(f'Samples/{sound}/Open Hat.WAV', False)        
             if df.iloc[6,i+1] =='x':
-                playsound(f'Samples/{sound}/Clap.WAV', block = False)
+                playsound(f'Samples/{sound}/Clap.WAV', False)
             if df.iloc[7,i+1] =='x':
-                playsound(f'Samples/{sound}/Claves.WAV', block = False)
+                playsound(f'Samples/{sound}/Claves.WAV', False)
             if df.iloc[8,i+1] =='x':
-                playsound(f'Samples/{sound}/Agogo.WAV', block = False)
+                playsound(f'Samples/{sound}/Agogo.WAV', False)
             if df.iloc[9,i+1] =='x':
-                playsound(f'Samples/{sound}/Crash.WAV', block = False)
+                playsound(f'Samples/{sound}/Crash.WAV', False)
