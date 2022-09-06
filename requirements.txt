@@ -1,4 +1,4 @@
 playsound==1.2.2
 pandas==1.1.5
 streamlit==1.12.2
-python3-gi==3.36.0-1
+pep517==0.13.0
