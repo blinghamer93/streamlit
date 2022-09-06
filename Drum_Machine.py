@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import time 
 from playsound import playsound
+from threading import Thread
 
 st.set_page_config(
      page_title="Drum Machine 3000",
@@ -28,7 +29,31 @@ loops = st.slider('Select amount of bars:', 1, 32, 2)
 
 bpm = st.slider('Select BPM:', 60, 200, 80)
 
+def Kick():
+    playsound(f'Samples/{sound}/Kick.WAV')
+def Snare():
+    playsound(f'Samples/{sound}/Snare.WAV')
+def Lo_Tom():
+    playsound(f'Samples/{sound}/Lo Tom.WAV')
+def Hi_Tom():
+    playsound(f'Samples/{sound}/Hi Tom.WAV')    
+def Closed_Hat():
+    playsound(f'Samples/{sound}/Closed Hat.WAV')    
+def Open_Hat():
+    playsound(f'Samples/{sound}/Open Hat.WAV')        
+def Clap():
+    playsound(f'Samples/{sound}/Clap.WAV')
+def Claves():
+    playsound(f'Samples/{sound}/Claves.WAV')
+def Agogo():
+    playsound(f'Samples/{sound}/Agogo.WAV')
+def Crash():
+    playsound(f'Samples/{sound}/Crash.WAV')
+    
+
+
 if uploaded_file is not None:
+    
     df = pd.read_csv(uploaded_file)
 
     if note == '1/16':
@@ -40,22 +65,22 @@ if uploaded_file is not None:
         for i in range(16):
             time.sleep(second)
             if df.iloc[0,i+1] == 'x':
-                playsound(f'Samples/{sound}/Kick.WAV', False)
+                Thread(target=Kick).start()
             if df.iloc[1,i+1] == 'x':
-                playsound(f'Samples/{sound}/Snare.WAV',False)
+                Thread(target=Snare).start()
             if df.iloc[2,i+1] == 'x':
-                playsound(f'Samples/{sound}/Lo Tom.WAV', False)
+                Thread(target=Lo_Tom).start()
             if df.iloc[3,i+1] =='x':
-                playsound(f'Samples/{sound}/Hi Tom.WAV', False)
+                Thread(target=Hi_Tom).start()
             if df.iloc[4,i+1] =='x':
-                playsound(f'Samples/{sound}/Closed Hat.WAV', False)
+                Thread(target=Closed_Hat).start()
             if df.iloc[5,i+1] =='x':
-                playsound(f'Samples/{sound}/Open Hat.WAV', False)        
+                Thread(target=Open_Hat).start()       
             if df.iloc[6,i+1] =='x':
-                playsound(f'Samples/{sound}/Clap.WAV', False)
+                Thread(target=Clap).start()
             if df.iloc[7,i+1] =='x':
-                playsound(f'Samples/{sound}/Claves.WAV', False)
+                Thread(target=Claves).start()
             if df.iloc[8,i+1] =='x':
-                playsound(f'Samples/{sound}/Agogo.WAV', False)
+                Thread(target=Agogo).start()
             if df.iloc[9,i+1] =='x':
-                playsound(f'Samples/{sound}/Crash.WAV', False)
+                Thread(target=Crash).start()
