@@ -3,6 +3,7 @@ import pandas as pd
 import time 
 from playsound import playsound
 from threading import Thread
+import gi
 
 st.set_page_config(
      page_title="Drum Machine 3000",
