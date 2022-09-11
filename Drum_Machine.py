@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import time 
 import pygame 
+from pygame import mixer
+
 
 pygame.init()
 pygame.mixer.init()
