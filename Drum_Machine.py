@@ -6,6 +6,7 @@ from pygame import mixer
 
 
 pygame.init()
+pygame.mixer.init()
 
 st.set_page_config(
      page_title="Drum Machine 3000",
