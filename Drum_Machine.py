@@ -4,6 +4,7 @@ import time
 import pygame 
 
 pygame.init()
+pygame.mixer.init()
 
 st.set_page_config(
      page_title="Drum Machine 3000",
